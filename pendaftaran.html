@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Halaman Pendaftaran</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="witdh=device-width, initial-scale=1">
+        <meta name="author" content="Ergi Zenila Marta Sasmige">
+        <meta name="nim" content="233307010">
+        <link rel="icon" type="png" href="icon.png" sizes="16x16" />
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            header {
+                background-color: #666;
+                padding: 30px;
+                text-align: center;
+                font-size: 35px;
+                color: white;
+            }
+            nav {
+                float: left;
+                width: 30%;
+                height: 600px;
+                background: #ccc;
+                padding: 20px;
+            }
+            nav ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            article {
+                float: left;
+                padding: 20px;
+                width: 70%;
+                background-color: #f1f1f1;
+                height: 600px;
+            }
+            section ::after {
+                content: " ";
+                display: table;
+                clear: both;
+            }
+            footer {
+                background-color: #777;
+                padding: 10px;
+                text-align: center;
+                color: white;
+            }
+            @media (max-width: 600px) {
+                nav, article {
+                    height: 100%;
+                    height: auto;
+                }
+            }
+            .container { 
+                padding: 20px;
+                width: 53%;
+                position: relative;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h2>Ergi Website</h2>
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="gambar.html">Gambar</a></li>
+                    <li><a href="event.html">Event</a></li>
+                    <li><a href="audio.html">Audio</a></li>
+                    <li><a href="video.html">Video</a></li>
+                    <li><a href="svg.html">SVG</a></li>
+                    <li><a href="canvas.html">Canvas</a></li>
+                    <li><a href="pendaftaran.html">Pendaftaran</a></li>
+                </ul>
+            </nav>
+
+            <article style="font-family: 'Times New Roman', Times, serif;">
+                <h1>Form Penjadwalan Pertemuan</h1>
+                <div class="container">
+                <fieldset>
+                    <form action="proses.php" method="post"></form>
+                        <legend>Informasi Pribadi</legend>
+                    <table>
+                        <tr>
+                            <td><label for="name">Nama</label></td>
+                            <td><input type="text" name="name" id="name" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="notelp">No. Telepon</label></td>
+                            <td><input type="tel" id="notelp" name="notelp" placeholder="xxx-xxxxxx" pattern="[0-9]{4}-[0-9]{6}" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Alamat Email</label></td>
+                            <td><input type="email" id="email" name="email" placeholder="nama@domain.com" required></td>
+                        </tr>
+                        <tr>
+                            <td><label for="tanggal">Tanggal Lahir</label></td>
+                            <td><input type="date" id="tanggal" name="tanggal" min="1987-01-01" max="1993-01-01" required></td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+                <div class="container">
+                    <fieldset>
+                        <form action="proses.php" method="post"></form>
+                            <legend>Permintaan Pertemuan</legend>
+                        <table>
+                            <tr>
+                                <td><label for="tujuan">Tujuan Pertemuan</label></td>
+                                <td><input type="text" id="tujun" name="tujuan" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="tingkat">Tingkat Kepentingan Pertemuan</label></td>
+                                <td><input type="range" id="tingkat" name="tingkat" min="0" max="10" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="tanggal">Tanggal</label></td>
+                                <td><input type="date" id="tanggal" name="tanggal" required></td>
+                            </tr>
+                            <tr>
+                                <td><label for="jam">Waktu</label></td>
+                                <td><input type="time" id="jam" name="jam" min="17:00" max="21:00" required> </td>
+                            </tr>
+                        </table>
+                        </form>
+                    </div>
+
+                </fieldset>
+                        <form action="proses.html" method="post">
+                            <input type="submit" value="submit">
+                        </form>
+                <p>KESIMPULAN:</p>
+                <p>Disini kita membuat sebuah Form Penjadwalan Pertemuan.</p>
+            </article>
+        </section>
+
+        <footer>
+            <p><i>ErgiZenilaMartaSasmige@233307010</i></p>
+        </footer>
+    </body>
+</html>
